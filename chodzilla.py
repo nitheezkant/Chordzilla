@@ -32,16 +32,30 @@ fu=0
 fd=0
 while True:
 	if u==0 and fu==1:
-		flag2=0
+		fu=0
 	if u and fu==0:
 		pygame.mixer.music.stop()
-		pygame.mixer.music.load()
+		if c1:
+			pygame.mixer.music.load(path+ac[1]+"-u.mp3")
+		elif c2:
+			pygame.mixer.music.load(path+ac[2]+"-u.mp3")
+		elif c3:
+			pygame.mixer.music.load(path+ac[3]+"-u.mp3")
+		elif c4:
+			pygame.mixer.music.load(path+ac[4]+"-u.mp3")
 		pygame.mixer.music.play()
-		flag2=1
+		fu=1
 	if d==0 and fd==1:
-		flag3=0
+		fd=0
 	if d and fd==0:
 		pygame.mixer.music.stop()
-		pygame.mixer.music.load("/home/nitheez/Downloads/c-d.mp3")
+		if c1:
+			pygame.mixer.music.load(path+ac[1]+"-d.mp3")
+		elif c2:
+			pygame.mixer.music.load(path+ac[2]+"-d.mp3")
+		elif c3:
+			pygame.mixer.music.load(path+ac[3]+"-d.mp3")
+		elif c4:
+			pygame.mixer.music.load(path+ac[4]+"-d.mp3")
 		pygame.mixer.music.play()
-		flag3=1
+		fd=1
