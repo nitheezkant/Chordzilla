@@ -1,36 +1,21 @@
 import bluetooth
-Use the discover_devices() function to get a list of nearby Bluetooth devices:
-makefile
-Copy code
-devices = bluetooth.discover_devices()
-Loop through the list of devices and check if the device you want to connect to is in the list. You can use the lookup_name() function to get the name of each device:
-kotlin
-Copy code
-for device in devices:
-    name = bluetooth.lookup_name(device)
-    if name == 'DEVICE_NAME':
-        target_address = device
+
+server_socket = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
+
+port = 1
+server_socket.bind(("", port))
+server_socket.listen(1)
+
+print("Waiting for connection...")
+
+client_socket, address = server_socket.accept()
+print("Accepted connection from", address)
+
+while True:
+    data = client_socket.recv(1024)
+    if not data:
         break
-Replace 'DEVICE_NAME' with the name of the device you want to connect to.
+    print("Received:", data)
 
-Use the BluetoothSocket class to create a Bluetooth socket and connect to the device:
-scss
-Copy code
-sock = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
-sock.connect((target_address, 1))
-The second argument to connect() is the channel number. If you don't know the channel number, you can use the get_service_records() function to get a list of services provided by the device and their channel numbers:
-
-css
-Copy code
-services = bluetooth.find_service(address=target_address)
-Once you have connected to the device, you can send and receive data using the socket's send() and recv() methods:
-kotlin
-Copy code
-sock.send('Hello, world!')
-data = sock.recv(1024)
-Replace 'Hello, world!' with the data you want to send. The argument to recv() is the maximum number of bytes to receive.
-
-When you are done with the connection, close the socket:
-go
-Copy code
-sock.close()
+client_socket.close()
+server_socket.close()
