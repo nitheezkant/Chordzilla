@@ -1,0 +1,78 @@
+A = NoteContainer(["E-2","A-2","E-3","A-3","C#-3","E-4"])
+Am = NoteContainer(["E-2","A-2","E-3","A-3","C-3","E-4"])
+A7 = NoteContainer(["E-2", "A-2", "E-3", "G-3", "C#-4", “E-4”])
+
+A# = NoteContainer(["F-2","A#-2","F-3","A#-3","D-4","F-4"])
+A#m = NoteContainer(["F-2", "A#-2", "F-3", "A#-3", "C#-4", "F-4"])
+A#7 = NoteContainer([“])
+
+B = NoteContainer(["F#-2","B-2","F#-3","B-3","D#-4","F#-4"])
+Bm = NoteContainer(["G-2","C-3","G-3","C-4","D#-4","G-4"])
+B7 = NoteContainer(["B-2", "F#-3", "A-3", "D#-4", "F#-4", “B-4”])
+
+C = NoteContainer(["E-2","C-3","E-3","G-3","C-4","E-4"])
+Cm = NoteContainer(["C-1","G-1","C-2","D#-2","G-2","C-3"])
+C7 = NoteContainer(["E-2", "C-3", "G-3", "A#-3", "E-4",”G-4”])
+
+C# = NoteContainer(["F-2", "C#-3", "F-3", "G#-3", "C#-3", "F-3"])
+C#m = NoteContainer(["G#-2","C#-3","G#-3","C#-4","E-4","G#-4"])
+C#7 = NoteContainer([])
+
+D = NoteContainer(["A-2","A-2","D-3","A-3","D-4","F#-3"])
+Dm = NoteContainer(["A-2","D-3","A-3","D-4","F-4","A-4"])
+D7 = NoteContainer(["A-2", "D-3", "A-3", "C-4", "F#-4",”A-4”])
+
+D# = NoteContainer(["A#-2", "D#-3", "A#-3", "D#-4", "G-4", "A#-4"])
+D#m = NoteContainer(["A#-2","D#-3","A#-3","D#-4","F#-4","A#-4"])
+D#7 = NoteContainer([])
+
+E = NoteContainer(["E-2","B-2","E-3","G#-3","B-3","E-4"])
+Em = NoteContainer(["E-2","B-2","E-3","G-3","B-3","E-4"])
+E7 = NoteContainer(["E-2", "B-2", "D-3", "G#-3", "D-4",”E-4”])
+
+F = NoteContainer(["F-2","C-3","F-3","A-3","C-4","F-4"])
+Fm = NoteContainer(["F-2","C-3","F-3","G#-3","C-4","F-4"])
+F7 = NoteContainer(["F-2", "C-3", "D#-3", "A-3", "C-4",”F-4”])
+
+G = NoteContainer(["G-2","B-2","D-3","G-3","B-3","G-4"])
+G7 = NoteContainer(["G-2", "B-2", "D-3", "G-3", "B-3",”F-4”])
+F# = NoteContainer(["F#-2", "C#-3", "F#-3", "A#-3", "C#-4", "F#-4"])
+G# = NoteContainer(["C-2", "G#-2", "C-3", "D#-3", "G#-3", "C-4"])
+Gm = NoteContainer(["G-2","D-3","G-3","A#-3","D-4","G-4"])
+F#m = NoteContainer(["F#-2","C#-2","F#-3","A-3","C#-4","F#-4"])
+G#m = NoteContainer(["G#-2","D#-3","G#-3","B-3","D#-4","G#-4"])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cdim = NoteContainer(["C-1", "D#1", "F-1", "G#1"])
+Ddim = NoteContainer(["D-1", "F-1", "G#1", "A#1"])
+Edim = NoteContainer(["E-1", "G-1", "A#1", "C-2"])
+Fdim = NoteContainer(["F-1", "G#1", "B-1", "D-2"])
+Gdim = NoteContainer(["G-1", "A#1", "C#2", "E-2"])
+Adim = NoteContainer(["A-1", "C-2", "D#2", "F-2"])
+Bdim = NoteContainer(["B-1", "D-2", "F-2", "G#2"])
+Caug = NoteContainer(["C-1", "E-1", "G#1"])
+Daug = NoteContainer(["D-1", "F#1", "A#1"])
+Eaug = NoteContainer(["E-1", "G#1", "B#1"])
+Faug = NoteContainer(["F-1", "A-1", "C-2"])
+Gaug = NoteContainer(["G-1", "B-1", "D#2"])
+Aaug = NoteContainer(["A-1", "C#2", "F-2"])
+Baug = NoteContainer(["B-1", "D#2", "G-2"])
