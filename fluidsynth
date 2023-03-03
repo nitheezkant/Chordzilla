@@ -1,0 +1,148 @@
+import time
+from mingus.core import notes,chords
+from mingus.containers import *
+from mingus.midi import fluidsynth
+
+from gpiozero import Button
+import RPi.GPIO as g
+import serial
+
+sf="mine.sf3"
+fluidsynth.init(sf,"alsa")
+# fluidsynth.set_instrument(1,25)
+fluidsynth.main_volume(1,1000)
+note_container=NoteContainer(["E-1","A-1","E-2","A-2","C-3","E-3"])
+active_chords
+# g=Guitar()
+i =0
+x=0.04
+
+
+"""
+
+import bluetooth
+
+server_socket = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
+
+port = 1
+server_socket.bind(("", port))
+server_socket.listen(1)
+
+print("Waiting for connection...")
+
+client_socket, address = server_socket.accept()
+print("Accepted connection from", address)
+
+while True:
+    data = client_socket.recv(1024)
+    if not data:
+        break
+    print("Received:", data)
+
+
+ser=serial.Serial('/dev/ttyAMA0', baudrate=9600, timeout=10)
+ser.write(b'hiouigui')
+data1=""
+data=""
+while 1:
+	data=ser.read(1)
+	data1+=((data.decode()))
+
+	print((data.decode()))
+	
+	if data.decode()=='k':
+		break
+	#ser.flush()
+	#data=""
+	
+
+#uart=UART(0,9600)
+print("ghand")
+"""
+
+
+
+g.setmode(g.BCM)
+g.setup(2,g.IN)
+g.setup(3,g.IN)
+g.setup(4,g.IN)
+g.setup(5,g.IN)
+
+g.setup(6,g.IN)
+g.setup(7,g.IN)
+
+g.setup(8,g.IN)
+g.setup(9,g.IN)
+g.setup(10,g.IN)
+g.setup(11,g.IN)
+g.setup(20,g.IN)
+g.setup(21,g.IN)
+
+
+
+u=g.input(6)
+d=g.input(7)
+
+f8=0
+f9=0
+f10=0
+f11=0
+f20=0
+f21=0
+x=0.04
+
+while True:
+
+	if g.input(8)==0 and f8==1:
+		f8=0
+	if g.input(8) and f8==0:
+		
+		if g.input(2):
+			fluidsynth.play_Note(Note(note_container[0].name,2),1,127)
+		f8=1
+	
+	
+	if g.input(9)==0 and f9==1:
+		f9=0
+	if g.input(9) and f9==0:
+		
+		if g.input(2):
+			fluidsynth.play_Note(Note(note_container[1].name,2),2,127)
+		f9=1
+		
+	if g.input(10)==0 and f10==1:
+		f10=0
+	if g.input(10) and f10==0:
+		
+		if g.input(2):
+			fluidsynth.play_Note(Note(note_container[2].name,3),3,127)
+		f10=1
+		
+		
+	if g.input(11)==0 and f11==1:
+		f11=0
+	if g.input(11) and f11==0:
+		
+		if g.input(2):
+			fluidsynth.play_Note(Note(note_container[3].name,3),4,127)
+		f11=1
+		
+	if g.input(20)==0 and f20==1:
+		f20=0
+	if g.input(20) and f20==0:
+		
+		if g.input(2):
+			fluidsynth.play_Note(Note(note_container[4].name,4),5,127)
+		f20=1
+	
+	if g.input(21)==0 and f21==1:
+		f21=0
+	if g.input(21) and f21==0:
+		
+		if g.input(2):
+			fluidsynth.play_Note(Note(note_container[5].name,4),6,127)
+		f21=1
+	time.sleep(0.0005)
+print(count)
+	
+	
