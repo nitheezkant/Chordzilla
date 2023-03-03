@@ -11,9 +11,9 @@ sf="mine.sf3"
 fluidsynth.init(sf,"alsa")
 # fluidsynth.set_instrument(1,25)
 fluidsynth.main_volume(1,1000)
-note_container=NoteContainer(["E-1","A-1","E-2","A-2","C-3","E-3"])
-active_chords
-# g=Guitar()
+active_chords=[NoteContainer(["E-1","A-1","E-2","A-2","C-3","E-3"]),NoteContainer(["E-1","A-1","E-2","A-2","C-3","E-3"]),NoteContainer(["E-1","A-1","E-2","A-2","C-3","E-3"]),NoteContainer(["E-1","A-1","E-2","A-2","C-3","E-3"]),NoteContainer(["E-1","A-1","E-2","A-2","C-3","E-3"]),NoteContainer(["E-1","A-1","E-2","A-2","C-3","E-3"])]
+
+
 i =0
 x=0.04
 
@@ -67,9 +67,10 @@ g.setup(2,g.IN)
 g.setup(3,g.IN)
 g.setup(4,g.IN)
 g.setup(5,g.IN)
-
 g.setup(6,g.IN)
 g.setup(7,g.IN)
+g.setup(16,g.IN)
+g.setup(17,g.IN)
 
 g.setup(8,g.IN)
 g.setup(9,g.IN)
@@ -98,7 +99,22 @@ while True:
 	if g.input(8) and f8==0:
 		
 		if g.input(2):
-			fluidsynth.play_Note(Note(note_container[0].name,2),1,127)
+			fluidsynth.play_Note(Note(active_chords[0].note_container[0].name,active_chords[0].note_container[0].octave),1,127)
+		elif g.input(3):
+			fluidsynth.play_Note(Note(active_chords[1].note_container[0].name,active_chords[1].note_container[0].octave),1,127)
+		elif g.input(4):
+			fluidsynth.play_Note(Note(active_chords[2].note_container[0].name,active_chords[2].note_container[0].octave),1,127)
+		elif g.input(5):
+			fluidsynth.play_Note(Note(active_chords[3].note_container[0].name,active_chords[3].note_container[0].octave),1,127)
+		elif g.input(6):
+			fluidsynth.play_Note(Note(active_chords[4].note_container[0].name,active_chords[4].note_container[0].octave),1,127)
+		elif g.input(7):
+			fluidsynth.play_Note(Note(active_chords[5].note_container[0].name,active_chords[5].note_container[0].octave),1,127)
+		elif g.input(16):
+			fluidsynth.play_Note(Note(active_chords[6].note_container[0].name,active_chords[6].note_container[0].octave),1,127)
+		elif g.input(17):
+			fluidsynth.play_Note(Note(active_chords[7].note_container[0].name,active_chords[7].note_container[0].octave),1,127)
+
 		f8=1
 	
 	
@@ -107,7 +123,21 @@ while True:
 	if g.input(9) and f9==0:
 		
 		if g.input(2):
-			fluidsynth.play_Note(Note(note_container[1].name,2),2,127)
+			fluidsynth.play_Note(Note(active_chords[0].note_container[1].name,active_chords[0].note_container[1].octave),1,127)
+		elif g.input(3):
+			fluidsynth.play_Note(Note(active_chords[1].note_container[1].name,active_chords[1].note_container[1].octave),1,127)
+		elif g.input(4):
+			fluidsynth.play_Note(Note(active_chords[2].note_container[1].name,active_chords[2].note_container[1].octave),1,127)
+		elif g.input(5):
+			fluidsynth.play_Note(Note(active_chords[3].note_container[1].name,active_chords[3].note_container[1].octave),1,127)
+		elif g.input(6):
+			fluidsynth.play_Note(Note(active_chords[4].note_container[1].name,active_chords[4].note_container[1].octave),1,127)
+		elif g.input(7):
+			fluidsynth.play_Note(Note(active_chords[5].note_container[1].name,active_chords[5].note_container[1].octave),1,127)
+		elif g.input(16):
+			fluidsynth.play_Note(Note(active_chords[6].note_container[1].name,active_chords[6].note_container[1].octave),1,127)
+		elif g.input(17):
+			fluidsynth.play_Note(Note(active_chords[7].note_container[1].name,active_chords[7].note_container[1].octave),1,127)
 		f9=1
 		
 	if g.input(10)==0 and f10==1:
@@ -115,7 +145,21 @@ while True:
 	if g.input(10) and f10==0:
 		
 		if g.input(2):
-			fluidsynth.play_Note(Note(note_container[2].name,3),3,127)
+			fluidsynth.play_Note(Note(active_chords[0].note_container[2].name,active_chords[0].note_container[2].octave),1,127)
+		elif g.input(3):
+			fluidsynth.play_Note(Note(active_chords[1].note_container[2].name,active_chords[1].note_container[2].octave),1,127)
+		elif g.input(4):
+			fluidsynth.play_Note(Note(active_chords[2].note_container[2].name,active_chords[2].note_container[2].octave),1,127)
+		elif g.input(5):
+			fluidsynth.play_Note(Note(active_chords[3].note_container[2].name,active_chords[3].note_container[2].octave),1,127)
+		elif g.input(6):
+			fluidsynth.play_Note(Note(active_chords[4].note_container[2].name,active_chords[4].note_container[2].octave),1,127)
+		elif g.input(7):
+			fluidsynth.play_Note(Note(active_chords[5].note_container[2].name,active_chords[5].note_container[2].octave),1,127)
+		elif g.input(16):
+			fluidsynth.play_Note(Note(active_chords[6].note_container[2].name,active_chords[6].note_container[2].octave),1,127)
+		elif g.input(17):
+			fluidsynth.play_Note(Note(active_chords[7].note_container[2].name,active_chords[7].note_container[2].octave),1,127)
 		f10=1
 		
 		
@@ -124,7 +168,21 @@ while True:
 	if g.input(11) and f11==0:
 		
 		if g.input(2):
-			fluidsynth.play_Note(Note(note_container[3].name,3),4,127)
+			fluidsynth.play_Note(Note(active_chords[0].note_container[3].name,active_chords[0].note_container[3].octave),1,127)
+		elif g.input(3):
+			fluidsynth.play_Note(Note(active_chords[1].note_container[3].name,active_chords[1].note_container[3].octave),1,127)
+		elif g.input(4):
+			fluidsynth.play_Note(Note(active_chords[2].note_container[3].name,active_chords[2].note_container[3].octave),1,127)
+		elif g.input(5):
+			fluidsynth.play_Note(Note(active_chords[3].note_container[3].name,active_chords[3].note_container[3].octave),1,127)
+		elif g.input(6):
+			fluidsynth.play_Note(Note(active_chords[4].note_container[3].name,active_chords[4].note_container[3].octave),1,127)
+		elif g.input(7):
+			fluidsynth.play_Note(Note(active_chords[5].note_container[3].name,active_chords[5].note_container[3].octave),1,127)
+		elif g.input(16):
+			fluidsynth.play_Note(Note(active_chords[6].note_container[3].name,active_chords[6].note_container[3].octave),1,127)
+		elif g.input(17):
+			fluidsynth.play_Note(Note(active_chords[7].note_container[3].name,active_chords[7].note_container[3].octave),1,127)
 		f11=1
 		
 	if g.input(20)==0 and f20==1:
@@ -132,7 +190,21 @@ while True:
 	if g.input(20) and f20==0:
 		
 		if g.input(2):
-			fluidsynth.play_Note(Note(note_container[4].name,4),5,127)
+			fluidsynth.play_Note(Note(active_chords[0].note_container[4].name,active_chords[0].note_container[4].octave),1,127)
+		elif g.input(3):
+			fluidsynth.play_Note(Note(active_chords[1].note_container[4].name,active_chords[1].note_container[4].octave),1,127)
+		elif g.input(4):
+			fluidsynth.play_Note(Note(active_chords[2].note_container[4].name,active_chords[2].note_container[4].octave),1,127)
+		elif g.input(5):
+			fluidsynth.play_Note(Note(active_chords[3].note_container[4].name,active_chords[3].note_container[4].octave),1,127)
+		elif g.input(6):
+			fluidsynth.play_Note(Note(active_chords[4].note_container[4].name,active_chords[4].note_container[4].octave),1,127)
+		elif g.input(7):
+			fluidsynth.play_Note(Note(active_chords[5].note_container[4].name,active_chords[5].note_container[4].octave),1,127)
+		elif g.input(16):
+			fluidsynth.play_Note(Note(active_chords[6].note_container[4].name,active_chords[6].note_container[4].octave),1,127)
+		elif g.input(17):
+			fluidsynth.play_Note(Note(active_chords[7].note_container[4].name,active_chords[7].note_container[4].octave),1,127)
 		f20=1
 	
 	if g.input(21)==0 and f21==1:
@@ -140,7 +212,21 @@ while True:
 	if g.input(21) and f21==0:
 		
 		if g.input(2):
-			fluidsynth.play_Note(Note(note_container[5].name,4),6,127)
+			fluidsynth.play_Note(Note(active_chords[0].note_container[5].name,active_chords[0].note_container[5].octave),1,127)
+		elif g.input(3):
+			fluidsynth.play_Note(Note(active_chords[1].note_container[5].name,active_chords[1].note_container[5].octave),1,127)
+		elif g.input(4):
+			fluidsynth.play_Note(Note(active_chords[2].note_container[5].name,active_chords[2].note_container[5].octave),1,127)
+		elif g.input(5):
+			fluidsynth.play_Note(Note(active_chords[3].note_container[5].name,active_chords[3].note_container[5].octave),1,127)
+		elif g.input(6):
+			fluidsynth.play_Note(Note(active_chords[4].note_container[5].name,active_chords[4].note_container[5].octave),1,127)
+		elif g.input(7):
+			fluidsynth.play_Note(Note(active_chords[5].note_container[5].name,active_chords[5].note_container[5].octave),1,127)
+		elif g.input(16):
+			fluidsynth.play_Note(Note(active_chords[6].note_container[5].name,active_chords[6].note_container[5].octave),1,127)
+		elif g.input(17):
+			fluidsynth.play_Note(Note(active_chords[7].note_container[5].name,active_chords[7].note_container[5].octave),1,127)
 		f21=1
 	time.sleep(0.0005)
 print(count)
