@@ -129,8 +129,8 @@ sf=SFFILES[int(data2)-1]
 fluidsynth.init(sf,"alsa")
 # fluidsynth.set_instrument(1,25)
 fluidsynth.main_volume(1,1000)
-A = NoteContainer(["E-2","A-2","E-3","A-3","C#-3","E-4"])
-Am = NoteContainer(["E-2","A-2","E-3","A-3","C-3","E-4"])
+A = NoteContainer(["E-2","A-2","E-3","A-3","C#-4","E-4"])
+Am = NoteContainer(["E-2","A-2","E-3","A-3","C-4","E-4"])
 A7 = NoteContainer(["E-2", "A-2", "E-3", "G-3", "C#-4", "E-4"])
 
 As = NoteContainer(["F-2","A#-2","F-3","A#-3","D-4","F-4"])
@@ -145,7 +145,7 @@ C = NoteContainer(["E-2","C-3","E-3","G-3","C-4","E-4"])
 Cm = NoteContainer(["C-1","G-1","C-2","D#-2","G-2","C-3"])
 C7 = NoteContainer(["E-2", "C-3", "G-3", "A#-3", "E-4", "G-4"])
 
-Cs = NoteContainer(["F-2", "C#-3", "F-3", "G#-3", "C#-3", "F-3"])
+Cs = NoteContainer(["F-2", "C#-3", "F-3", "G#-3", "C#-3", "F-4"])
 Csm = NoteContainer(["G#-2","C#-3","G#-3","C#-4","E-4","G#-4"])
 Cs7 = NoteContainer(["G#-2","C#-3","G#-3","B-3","F-4","G#-4"])
 
@@ -166,7 +166,7 @@ Fm = NoteContainer(["F-2","C-3","F-3","G#-3","C-4","F-4"])
 F7 = NoteContainer(["F-2", "C-3", "D#-3", "A-3", "C-4","F-4"])
 
 Fs = NoteContainer(["F#-2", "C#-3", "F#-3", "A#-3", "C#-4", "F#-4"])
-Fsm = NoteContainer(["F#-2","C#-2","F#-3","A-3","C#-4","F#-4"])
+Fsm = NoteContainer(["F#-2","C#-3","F#-3","A-3","C#-4","F#-4"])
 Fs7 = NoteContainer(["F#-2","C#-3","E-3","A#-3","E-4","F#-4"])
 
 G = NoteContainer(["G-2","B-2","D-3","G-3","B-3","G-4"])
